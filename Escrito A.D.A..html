@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopa de Letras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #8fc9ff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+    }
+    #content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      margin-top: 20px;
+    }
+    #sopa {
+      border-collapse: collapse;
+    }
+    #sopa td {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #fff;
+      text-align: center;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .selected {
+      background-color: #3569c9;
+    }
+    .word {
+      background-color: #d5b3da !important;
+    }
+    .definition {
+      margin-top: 20px;
+      text-align: left;   
+     padding-top: 20px;
+      
+    }
+    .definition h2 {
+      text-align: center;
+    }
+    .definition li {
+      margin-bottom: 10px;
+      }
+      .x {
+        display: flex;
+        flex-direction: column;
+      }
+  </style>
+</head>
+<body>
+  <div class="x">
+  <h1>Sopa de Letras</h1>
+
+  <div id="content">
+    <div id="sopa-container">
+        <table id="sopa">
+            <tr>
+              <td>U</td><td>A</td><td>P</td><td>J</td><td>C</td><td>P</td><td>L</td><td>A</td><td>R</td><td>Z</td><td>H</td><td>L</td><td>A</td><td>E</td>
+            <td>U</td><td>D</td><td>E</td><td>E</td></tr>
+            <tr>
+              <td>O</td><td>R</td><td>D</td><td>V</td><td>O</td><td>N</td><td>E</td><td>R</td><td>U</td><td>A</td><td>V</td><td>F</td><td>M</td><td>P</td>
+            <td>D</td><td>A</td><td>H</td><td>S</td></tr>
+            <tr>
+              <td>A</td><td>R</td><td>A</td><td>P</td><td>M</td><td>S</td><td>P</td><td>J</td><td>O</td><td>G</td><td>L</td><td>O</td><td>I</td><td>P</td>
+            <td>A</td><td>D</td><td>O</td><td>R</td></tr>
+            <tr>
+              <td>I</td><td>O</td><td>D</td><td>R</td><td>P</td><td>N</td><td>C</td><td>U</td><td>U</td><td>C</td><td>Q</td><td>M</td><td>G</td><td>O</td>
+            <td>D</td><td>I</td><td>F</td><td>E</td></tr>
+            <tr>
+              <td>C</td><td>U</td><td>I</td><td>O</td><td>R</td><td>Q</td><td>V</td><td>B</td><td>L</td><td>Ñ</td><td>Z</td><td>H</td><td>A</td><td>R</td>
+            <td>I</td><td>L</td><td>O</td><td>U</td></tr>
+            <tr>
+              <td>N</td><td>O</td><td>L</td><td>D</td><td>E</td><td>R</td><td>V</td><td>B</td><td>B</td><td>Y</td><td>Q</td><td>P</td><td>B</td><td>T</td>
+            <td>N</td><td>I</td><td>E</td><td>S</td></tr>
+            <tr>
+              <td>E</td><td>F</td><td>I</td><td>U</td><td>N</td><td>O</td><td>O</td><td>N</td><td>V</td><td>M</td><td>I</td><td>O</td><td>I</td><td>A</td>
+            <td>U</td><td>B</td><td>A</td><td>A</td></tr>
+            <tr>
+              <td>I</td><td>Q</td><td>B</td><td>C</td><td>S</td><td>R</td><td>P</td><td>B</td><td>E</td><td>K</td><td>I</td><td>G</td><td>L</td><td>B</td>
+            <td>T</td><td>A</td><td>A</td><td>B</td></tr>
+            <tr>
+              <td>C</td><td>X</td><td>I</td><td>T</td><td>I</td><td>I</td><td>E</td><td>G</td><td>U</td><td>I</td><td>V</td><td>U</td><td>I</td><td>I</td>
+            <td>R</td><td>C</td><td>Q</td><td>I</td></tr>
+            <tr>
+              <td>I</td><td>N</td><td>N</td><td>I</td><td>B</td><td>V</td><td>R</td><td>R</td><td>A</td><td>S</td><td>C</td><td>H</td><td>D</td><td>L</td>
+            <td>O</td><td>I</td><td>E</td><td>L</td></tr>
+            <tr>
+              <td>F</td><td>C</td><td>E</td><td>V</td><td>I</td><td>I</td><td>A</td><td>F</td><td>A</td><td>I</td><td>T</td><td>K</td><td>A</td><td>I</td>
+            <td>P</td><td>F</td><td>A</td><td>I</td></tr>
+            <tr>
+              <td>E</td><td>D</td><td>T</td><td>I</td><td>L</td><td>V</td><td>W</td><td>U</td><td>O</td><td>E</td><td>D</td><td>E</td><td>D</td><td>D</td>
+            <td>O</td><td>I</td><td>I</td><td>D</td></tr>
+            <tr>
+              <td>P</td><td>K</td><td>N</td><td>D</td><td>I</td><td>I</td><td>T</td><td>O</td><td>D</td><td>Z</td><td>K</td><td>B</td><td>Z</td><td>A</td>
+            <td>B</td><td>R</td><td>U</td><td>A</td></tr>
+            <tr>
+              <td>P</td><td>V</td><td>A</td><td>A</td><td>D</td><td>T</td><td>F</td><td>M</td><td>O</td><td>X</td><td>J</td><td>W</td><td>Ñ</td><td>D</td>
+            <td>H</td><td>E</td><td>E</td><td>D</td></tr>
+            <tr>
+              <td>E</td><td>H</td><td>M</td><td>D</td><td>A</td><td>U</td><td>O</td><td>D</td><td>Z</td><td>E</td><td>O</td><td>B</td><td>O</td><td>W</td>
+            <td>J</td><td>V</td><td>U</td><td>Ñ</td></tr>
+            <tr>
+              <td>F</td><td>A</td><td>E</td><td>M</td><td>D</td><td>Z</td><td>S</td><td>I</td><td>G</td><td>I</td><td>O</td><td>P</td><td>C</td><td>Y</td>
+            <td>B</td><td>E</td><td>W</td><td>C</td></tr>
+            <tr>
+              <td>U</td><td>Q</td><td>Ñ</td><td>E</td><td>M</td><td>D</td><td>V</td><td>I</td><td>S</td><td>I</td><td>B</td><td>I</td><td>L</td><td>I</td>
+            <td>D</td><td>A</td><td>D</td><td>D</td></tr>
+            <tr>
+              <td>I</td><td>N</td><td>T</td><td>E</td><td>R</td><td>O</td><td>P</td><td>E</td><td>R</td><td>A</td><td>B</td><td>I</td><td>L</td><td>I</td>
+            <td>D</td><td>A</td><td>D</td><td>Y</td></tr>
+          </table>
+        </div>
+        </div>
+      </div>
+  
+          <div class="definition">
+      <h2>Definiciones</h2>
+      <ul>
+      <li><strong>Software:</strong> Conjunto de programas, instrucciones y reglas informáticas para ejecutar tareas en una computadora.</li>
+      <li><strong>Robustez:</strong> Un SW es robusto si se comporta razonablemente aún bajo circunstancias no previstas.</li>
+      <li><strong>Eficiencia:</strong> Un SW es eficiente si utiliza los recursos en forma económica.</li>
+      <li><strong>Amigabilidad:</strong> Un SW es amigable si es fácil de usar para el usuario final.</li>
+      <li><strong>Verificabilidad:</strong> Un SW es verificable si fácilmente se puede ver si se cumplen sus propiedades o cualidades.</li>
+      <li><strong>Mantenibilidad:</strong> Un SW es mantenible si es factible realizarle modificaciones fácilmente una vez liberado.</li>
+      <li><strong>Reusabilidad:</strong> Un SW es reusable si puede utilizarse con cambios mínimos para hacer un SW nuevo.</li>
+      <li><strong>Portabilidad:</strong> Un SW es portable si puede ejecutarse en diferentes plataformas o ambientes.</li>
+      <li><strong>Comprensibilidad:</strong> Un SW es comprensible si es fácil de ser entendido, por los desarrolladores y por los usuarios finales.</li>
+      <li><strong>Interoperabilidad:</strong> Un SW es ínter operable si es capaz de coexistir y cooperar con otros productos de software.</li>
+      <li><strong>Productividad:</strong> El proceso de producción de SW es un proceso productivo cuando mide su propia eficiencia.</li>
+      <li><strong>Oportunidad:</strong> El proceso de desarrollo de SW es oportuno cuando es capaz de entregar el producto a tiempo.</li>
+      <li><strong>Visibilidad:</strong> El proceso de desarrollo de SW y el propio SW es visible si todos sus pasos y su estado actual están claramente documentados.</li>
+    </ul>
+    </div>
+    
+    
+  </div>
+
+  <script>
+    const words = {
+      'software': 'word',
+      'robustez': 'word',
+      'eficiencia': 'word',
+      'amigabilidad': 'word',
+      'verificabilidad': 'word',
+      'mantenibilidad': 'word',
+      'reusabilidad': 'word',
+      'portabilidad': 'word',
+      'comprensibilidad': 'word',
+      'interoperabilidad': 'word',
+      'productividad': 'word',
+      'oportunidad': 'word',
+      'visibilidad': 'word'
+    };
+    let p =0;
+    const c = Object.keys(words).length;
+    const table = document.getElementById('sopa');
+    let selectedCells = [];
+    let selectedWord = '';
+
+    table.addEventListener('click', function(event) {
+      const cell = event.target;
+      if (cell.tagName === 'TD') {
+        if (cell.classList.contains('selected')) {
+          cell.classList.remove('selected');
+          const index = selectedCells.indexOf(cell);
+          if (index > -1) {
+            selectedCells.splice(index, 1);
+          }
+        } else {
+          cell.classList.add('selected');
+          selectedCells.push(cell);
+        }
+  function checkWords() {
+    const selectedLetters = selectedCells.map(cell => cell.textContent).join('').toLowerCase();
+    const foundWords = Object.keys(words).filter(word => {
+      const sortedWord = word.split('').sort().join('');
+      return selectedLetters.includes(sortedWord);
+    });
+   
+    }
+  }
+        selectedWord = selectedCells.map(cell => cell.textContent).join('');
+
+        const className = words[selectedWord.toLowerCase()];
+        if (className) {
+          selectedCells.forEach(cell => cell.classList.add(className));
+          alert('¡Palabra encontrada!');
+          p++;
+
+      
+
+          console.log(p);
+          console.log(c);
+
+          if (p==c){
+          alert('FELICIDADES! GANASTE UN 0KM !!!');
+          }
+        }else if (selectedCells.length > 18) {
+            selectedCells.forEach(cell => cell.classList.remove('selected'));
+            selectedCells = [];
+            
+        }
+    }
+);
+  </script>
+</body>
+</html>
